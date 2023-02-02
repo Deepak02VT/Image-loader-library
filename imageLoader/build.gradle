@@ -44,3 +44,16 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
     kapt "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.Deepak02VT'
+                artifactId = 'imageloader'
+                version = '0.0.1'
+            }
+        }
+    }
+}
